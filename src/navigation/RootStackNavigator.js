@@ -1,11 +1,12 @@
 import React from 'react';
-import {Home} from '../screens';
+import {SearchAddress, Map} from '../screens';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 const RootStackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName={'Home'}>
-      <Stack.Screen name="Home" component={Home} />
+    <Stack.Navigator initialRouteName={'Search Address'}>
+      <Stack.Screen name="Search Address" component={SearchAddress} />
+      <Stack.Screen name="Map" component={Map} />
     </Stack.Navigator>
   );
 };

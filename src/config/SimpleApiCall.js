@@ -1,36 +1,14 @@
 import axios from 'axios';
 
-const simpleApiPostWithToken = (url, data, token) => {
-  console.log(
-    `url -> ${url}`,
-    `data -> ${JSON.stringify(data)}`,
-    `token -> ${token}`,
-  );
-  const bearerToken = 'Bearer ' + token;
-  return new Promise((resolve, reject) => {
-    axios
-      .post(`${url}`, data, {
-        headers: {
-          Authorization: bearerToken,
-        },
-      })
-      .then(response => {
-        resolve(response);
-      })
-      .catch(error => {
-        reject(error);
-      });
-  });
-};
-
-const simpleGetApidWithTokenAndParams = ({url, token, params}) => {
-  const bearerToken = 'Bearer ' + token;
+const simpleApiGetWithParams = ({url, params}) => {
+  console.log('url ->', url, 'params ->', params);
   return new Promise((resolve, reject) => {
     axios
       .get(`${url}`, {
         params: params,
         headers: {
-          Authorization: bearerToken,
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
       })
       .then(response => {
@@ -42,4 +20,4 @@ const simpleGetApidWithTokenAndParams = ({url, token, params}) => {
   });
 };
 
-export {simpleApiPostWithToken, simpleGetApidWithTokenAndParams};
+export {simpleApiGetWithParams};

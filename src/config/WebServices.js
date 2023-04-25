@@ -1,5 +1,4 @@
-export const baseUrl = 'https://dmsglobal.net/ct-api';
-export const get_timeline_data = `${baseUrl}/timeline`;
-
-export const post_like_api = `${baseUrl}/like`;
-export const post_dislike_api = `${baseUrl}/unlike`;
+export const token = 'AIzaSyAkIUkVVv1AOUFzuXmJnZS5pdtpg-t6UGU';
+export const baseUrl = 'https://maps.googleapis.com';
+export const get_predictions_api = `${baseUrl}/maps/api/place/autocomplete/json`;
+export const get_place_details_api = `${baseUrl}/maps/api/place/details/json`;

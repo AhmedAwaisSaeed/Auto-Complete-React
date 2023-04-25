@@ -1,9 +1,5 @@
-const replyIcon = require('../assets/images/reply.png');
-const likeIcon = require('../assets/images/like.png');
-const dislikeIcon = require('../assets/images/dislike.png');
+const markerIcon = require('../assets/images/marker.png');
 
 export default {
-  replyIcon,
-  likeIcon,
-  dislikeIcon,
+  markerIcon,
 };

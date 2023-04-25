@@ -1,11 +1,12 @@
+#import <GoogleMaps/GoogleMaps.h>
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyAkIUkVVv1AOUFzuXmJnZS5pdtpg-t6UGU"];
   self.moduleName = @"Timeline";
   // You can add your custom initial props in the dictionary below.
   // They will be passed down to the ViewController used by React Native.
